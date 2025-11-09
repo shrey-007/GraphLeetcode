@@ -11,12 +11,16 @@ import java.util.List;
  * */
 public class SatisfiabilityOfEqualityEquations {
     // suppose tumhe ye diya hai question a=b, b=c, c!=a toh kese ise kroge. You can do it using a hashmap.
-    // pehle 2 equations keh rhi hai ki a,b,c teeno hashmap mai aaege and 3rd equation keh rhi hai ki c and a ek saath hashmap mai nhi aaege toh ye contradiction hai toh return false
-    // is approach mai problem ye hai ki suppose ye question hai={m=n, n=p, p=m ,a=b, b=c, c!=a} toh isme m,n,p ek hashmap mai hoge and a,b,c alag hashmap mai hoge means jitne component utne hashmap toh pata kese padega kis character ko kis hashmap mai daalna hai
+    // pehle 2 equations keh rhi hai ki a,b,c teeno hashmap mai aaege and 3rd equation keh rhi hai ki c and a ek saath
+    // hashmap mai nhi aaege toh ye contradiction hai toh return false
+    // is approach mai problem ye hai ki suppose ye question hai={m=n, n=p, p=m ,a=b, b=c, c!=a} toh isme m,n,p ek
+    // hashmap mai hoge and a,b,c alag hashmap mai hoge means jitne component utne hashmap toh pata kese padega kis
+    // character ko kis hashmap mai daalna hai
 
     // Toh ise hashmap se ni kr skte. Let's se whether ise adjacency list se kr skte hai ki nhi. {a=b, b=c, c!=a}
     // a->{b}, b->{c,a}, c->{b}. According to first 2 equations a,b ke beech and b,c ke beech ek undirected edge hai.
-    // according to 3rd equation c,a ke beech koi edge nhi hai, and it is true sahi mai koi edge nhi hai toh ye contradict hua hi nhi. contradict hota toh false return krte but ye true return kr dega
+    // according to 3rd equation c,a ke beech koi edge nhi hai, and it is true sahi mai koi edge nhi hai toh ye
+    // contradict hua hi nhi. contradict hota toh false return krte but ye true return kr dega
 
     // we have to do it using disjoint set
     // pehele only voh equaltions ko dekho jinme == hai and unko same set mai daalo
