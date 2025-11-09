@@ -8,7 +8,8 @@ import java.util.*;
  * like the person labeled bi, return true if it is possible to split everyone into two groups in this way.
  * */
 public class PossibleBipartition {
-    // it is a simple BFS question just like bipartite graph
+    // it is a simple BFS question just like bipartite graph, adjacent nodes should not be in same group.
+    // jo log ek doosre ko hate krte hai unke beech edge daaldo, toh adjacent ho jaaege, fir same group m nhi aaege
     public boolean possibleBipartition(int n, int[][] dislikes) {
 
         // first create adjacency list
